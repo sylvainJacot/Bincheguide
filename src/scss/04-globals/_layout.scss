@@ -1,0 +1,14 @@
+body {
+    @include grid;
+}
+
+.main-header{
+    @include grid-column-child;
+    grid-row: 1;
+}
+
+.first-section {
+    @include grid;
+    @include grid-column-child;
+    grid-row: 2;
+}

@@ -2,14 +2,13 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Binche</title>
     <link rel="stylesheet" type="text/css" href="dist/css/styles.css" />
 </head>
 <body>
     <!-- ////////////  HEADER  //////////// -->
-    <header>
-
+    <header class="main-header">
         <div class="binchelogo">
             <h1>
                 <a href="index.html">
@@ -17,37 +16,36 @@
                 </a>
             </h1>
         </div>
-        <nav class="main-navigation">
+        <button class="burger-menu" id="burger-menu">
+            <span class="stick"></span>
+            <span class="stick"></span>
+            <span class="stick"></span>
+        </button>
+        <nav class="main-navigation" id="main-navigation">
             <ul class="primary-navigation">
                     <li>
-                        <a href="">Ma ville</a>
-                        <div class="dropdown-content">
-                            <ul>
-                                <li><a>Sub-Nav 01</a></li>
-                                <li><a>Sub-Nav 02</a></li>
-                                <li><a>Sub-Nav 03</a></li>
+                        Ma ville
+                            <ul class="dropdown-content">
+                                <li><a href="#">Sub-Nav 01</a></li>
+                                <li><a href="#">Sub-Nav 02</a></li>
+                                <li><a href="#">Sub-Nav 03</a></li>
                             </ul>
-                        </div>
                     </li>
                     <li>
-                        <a href="">Ma ville</a>
-                        <div class="dropdown-content">
-                            <ul>
-                                <li><a>Sub-Nav 01</a></li>
-                                <li><a>Sub-Nav 02</a></li>
-                                <li><a>Sub-Nav 03</a></li>
+                        Boom
+                            <ul class="dropdown-content">
+                                <li><a href="#">Sub-Nav 01</a></li>
+                                <li><a href="#">Sub-Nav 02</a></li>
+                                <li><a href="#">Sub-Nav 03</a></li>
                             </ul>
-                        </div>
                     </li>
                     <li>
-                        <a href="">Ma ville</a>
-                        <div class="dropdown-content">
-                            <ul>
-                                <li><a>Sub-Nav 01</a></li>
-                                <li><a>Sub-Nav 02</a></li>
-                                <li><a>Sub-Nav 03</a></li>
+                        Bim
+                            <ul class="dropdown-content">
+                                <li><a href="#">Sub-Nav 01</a></li>
+                                <li><a href="#">Sub-Nav 02</a></li>
+                                <li><a href="#">Sub-Nav 03</a></li>
                             </ul>
-                        </div>
                     </li>
             </ul>
             <ul class="secondary-navigation">
@@ -68,12 +66,14 @@
     </header>
 
     <!-- ////////////  SECTION 01 - LANDING PAGE  //////////// -->
-    <section class="first-section">
+    <main role="main" class="first-section">
         <h1>Bienvenue à Binche...</h1>
         <h2>Une ville proche du citoyen, qui informe au mieux la population de la vie communale</h2>
         <input type="text" placeholder="Search..">
         <div class="bubble-picture"></div>
-    </section>
+    </main>
+
+    <script src="./src/js/menu-icon.js"></script>
 
 </body>
 </html>

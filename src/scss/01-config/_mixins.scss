@@ -1,0 +1,60 @@
+//// MediaQueries ////
+@mixin mobile {
+    @media (max-width: 767px) { @content; }
+}
+@mixin tablet {
+    @media (min-width: 768px) { @content; }
+}
+@mixin laptopS {
+    @media (min-width: 1024px) { @content; }
+}
+@mixin laptopL {
+    @media (min-width: 1440px) { @content; }
+}
+
+
+//// Main Grid ////
+
+@mixin grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    @include tablet{
+        grid-template-columns: repeat(6, 1fr);
+    }
+    @include laptopS {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    @include laptopL {
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+@mixin grid-column-child {
+    grid-column: span 2;
+    @include tablet{
+        grid-column: span 6;
+    }
+    @include laptopS{
+        grid-column: span 10;
+    }
+    @include laptopL{
+        grid-column: span 12;
+    }
+}
+@mixin bodyPadding {
+    padding: 0px 16px;
+    @include tablet {
+        padding: 0px 56px;
+    }
+    @include laptopS {
+        padding: 0px 136px;
+    }
+}
+
+//// Transitions ////
+@mixin basictransion01 {
+    transition: .3s ease-out;
+}
+@mixin basictransion02 {
+    transition: .1s ease-out;
+}
