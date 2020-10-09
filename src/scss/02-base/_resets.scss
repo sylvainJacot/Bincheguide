@@ -202,7 +202,11 @@ textarea {
     margin: 0; /* 2 */
     vertical-align: baseline; /* 3 */
     *vertical-align: middle; /* 3 */
+    outline-style: none;
+    background: none;
+    border: none;
 }
+
 
 /**
  * Address Firefox 3+ setting `line-height` on `input` using `!important` in
@@ -359,4 +363,10 @@ textarea {
     background: #ccc;
     color: #000;
     padding: 0.2em 0;
+}
+
+
+button:active, button:focus {
+    outline: none !important;;
+    border: none !important;;
 }
