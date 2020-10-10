@@ -31,15 +31,20 @@
     }
 }
 @mixin bodyPadding {
-    padding: 0px 16px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
     @include tablet {
-        padding: 0px 56px;
+            padding-left: 7rem;
+            padding-right: 7rem;
     }
     @include laptopS {
-        padding: 0px 112px;
+            padding-left: 16rem;
+            padding-right: 16rem;
     }
     @include laptopL {
-        padding: 0px 136px;
+        padding-left: 17rem;
+        padding-right: 17rem;
     }
 }
 
