@@ -1,12 +1,31 @@
 @font-face {
     font-family: 'Poppins', sans-serif;
-    src: url('../../fonts/Poppins/Poppins-Bold.ttf');
+    src: url('../../fonts/Poppins/Poppins-Light.ttf');
+    font-weight: 300;
 }
 
-@mixin textbold($size:2rem) {
-    font-family: 'Poppins-Bold';
-    font-size: $size;
+@font-face {
+    font-family: 'Poppins', sans-serif;
+    src: url('../../fonts/Poppins/Poppins-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Poppins', sans-serif;
+    src: url('../../fonts/Poppins/Poppins-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Poppins', sans-serif;
+    src: url('../../fonts/Poppins/Poppins-Bold.ttf');
     font-weight: 700;
-    font-style: bold;
+}
+
+
+@mixin textbold($size:2rem, $weight:500) {
+    font-family: 'Poppins';
+    font-size: $size;
     line-height: 1.5;
+    font-weight: $weight;
 }

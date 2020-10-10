@@ -14,7 +14,10 @@
         grid-template-areas: "logo . . . . menu";
     }
     @include laptopS {
-        grid-template-areas: "logo . . . mainnav  mainnav  mainnav mainnav mainnav mainnav mainnav mainnav";
+        grid-template-areas: "logo .  mainnav  mainnav  mainnav mainnav mainnav mainnav mainnav mainnav";
+    }
+    @include laptopL {
+        grid-template-areas: "logo .  .  . mainnav  mainnav  mainnav mainnav mainnav mainnav mainnav mainnav";
     }
 }
 .burger-menu{
@@ -91,12 +94,12 @@ grid-area: logo;
 
     @include laptopS {
         display: flex;
+        justify-content: space-between;
         position: relative;
         top: unset;
         width: 100%;
         height: 100%;
         align-items: center;
-        grid-column: span 6;
         grid-area: mainnav;
         clip-path: unset;
         background-color: violet;
