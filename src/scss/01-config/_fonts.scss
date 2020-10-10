@@ -3,9 +3,10 @@
     src: url('../../fonts/Poppins/Poppins-Bold.ttf');
 }
 
-@mixin textbold {
-    font-family: 'Poppins';
-    font-size: 2rem;
-    font-weight: 500;
+@mixin textbold($size:2rem) {
+    font-family: 'Poppins-Bold';
+    font-size: $size;
+    font-weight: 700;
     font-style: bold;
+    line-height: 1.5;
 }

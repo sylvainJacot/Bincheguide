@@ -57,3 +57,14 @@
     transition: all $duration ease-in;
     transition-delay: $delay;
 }
+
+
+//// Absolute position ////
+
+@mixin absolutecenter($content : ""){
+    position: absolute;
+    content: $content;
+    top: 50%;  
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}

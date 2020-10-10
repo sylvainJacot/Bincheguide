@@ -7,11 +7,12 @@
     grid-template-areas: "logo  menu";
     align-items: center;
     @include bodyPadding;
+
     @include tablet {
         grid-template-areas: "logo . . . . menu";
     }
     @include laptopS {
-        grid-template-areas: "logo . . . . . mainnav mainnav mainnav mainnav mainnav mainnav";
+        grid-template-areas: "logo . . . mainnav  mainnav  mainnav mainnav mainnav mainnav mainnav mainnav";
     }
 }
 .burger-menu{
@@ -32,7 +33,7 @@
         border-radius: 8px;
         background-color: $primary-color;
         margin-bottom: 8px;
-        @include basictransition(.1s, 0s)
+        @include basictransition($duration : .1s, $delay: 0);
     }
     .stick:nth-child(3) {
         margin-bottom: 0;
@@ -47,7 +48,7 @@
         display: none;
         transition: .1s ease;
         margin-bottom: 0px;
-        @include basictransition(.3s, 0s)
+        @include basictransition($duration : .1s, $delay: 0);
     }
 
     .stick:nth-child(2) {
@@ -55,7 +56,7 @@
         width: 48px;
         height: 48px;
         border-radius: 50%;
-        @include basictransition(.1s, .3s);
+        @include basictransition($duration : .1s, $delay: .3s);
     }
 }
 .binchelogo {
@@ -84,30 +85,90 @@ grid-area: logo;
     background-color: $tertiary-color;
     top: 80px;
     clip-path: circle(.5% at 88% -24px);
-    @include basictransition(.3s, 0s);
-    @include textbold;
+    @include basictransition($duration : .3s, $delay: 0);
 
     @include laptopS {
         display: flex;
         position: relative;
         top: unset;
-        width: unset;
+        width: 100%;
+        height: 100%;
+        align-items: center;
         grid-column: span 6;
         grid-area: mainnav;
+        clip-path: unset;
+        background-color: violet;
+        padding: 0;
     }
 
 }
 .nav-active {
     clip-path: circle(140% at 88% -24px);
-    @include basictransition(.3s, 0s)
+    @include basictransition($duration : .3s, $delay: 0);
 }
 .dropdown-content {
     display: none;
 
 }
 .primary-navigation {
-    li:hover > ul {
-        display: block;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+
+    @include laptopS {
+        flex-direction: row;
     }
+
+    .primary-navigation-item {
+        position: relative;
+        display: inline;
+        width: fit-content;
+        @include textbold($size : 3rem);
+        margin-bottom: 16px;
+
+        @include laptopS {
+            @include textbold($size : 2rem);
+            padding: unset;
+            margin-right: 3rem;
+            margin-bottom: 0;
+        }
+    }
+    > .primary-navigation-item::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 100%;
+        border: solid $primary-color;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 2px;
+        transform: rotate(45deg) translate(-50%, -50%);
+        margin-left: 16px;
+  
+    }
+    .primary-navigation-item:hover > .dropdown-content{
+        display: flex;
+        flex-direction: column;
+        transform: translateX(0);
+        @include basictransition($duration : .3s, $delay: 0);
+
+        @include laptopS {
+            position: absolute;
+            width: fit-content;
+            background-color: yellow;
+            padding: 2rem;
+            transform: translateX(-2rem);
+            @include basictransition($duration : .3s, $delay: 0);
+
+            > li {
+                width: max-content;
+            }
+        }
+    }
+    .primary-navigation-item:hover::after{
+       top: 3px;
+       transform: rotate(-135deg) translate(-50%, -50%);
+
 }
 
+}
