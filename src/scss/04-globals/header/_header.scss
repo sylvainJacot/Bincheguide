@@ -1,3 +1,5 @@
+@import './primary-navigation';
+@import './secondary-navigation';
 
 .main-header {
     background-color: $tertiary-color;
@@ -106,69 +108,5 @@ grid-area: logo;
     clip-path: circle(140% at 88% -24px);
     @include basictransition($duration : .3s, $delay: 0);
 }
-.dropdown-content {
-    display: none;
 
-}
-.primary-navigation {
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
 
-    @include laptopS {
-        flex-direction: row;
-    }
-
-    .primary-navigation-item {
-        position: relative;
-        display: inline;
-        width: fit-content;
-        @include textbold($size : 3rem);
-        margin-bottom: 16px;
-
-        @include laptopS {
-            @include textbold($size : 2rem);
-            padding: unset;
-            margin-right: 3rem;
-            margin-bottom: 0;
-        }
-    }
-    > .primary-navigation-item::after {
-        position: absolute;
-        content: "";
-        top: 50%;
-        left: 100%;
-        border: solid $primary-color;
-        border-width: 0 2px 2px 0;
-        display: inline-block;
-        padding: 2px;
-        transform: rotate(45deg) translate(-50%, -50%);
-        margin-left: 16px;
-  
-    }
-    .primary-navigation-item:hover > .dropdown-content{
-        display: flex;
-        flex-direction: column;
-        transform: translateX(0);
-        @include basictransition($duration : .3s, $delay: 0);
-
-        @include laptopS {
-            position: absolute;
-            width: fit-content;
-            background-color: yellow;
-            padding: 2rem;
-            transform: translateX(-2rem);
-            @include basictransition($duration : .3s, $delay: 0);
-
-            > li {
-                width: max-content;
-            }
-        }
-    }
-    .primary-navigation-item:hover::after{
-       top: 3px;
-       transform: rotate(-135deg) translate(-50%, -50%);
-
-}
-
-}

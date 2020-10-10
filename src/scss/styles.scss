@@ -1,5 +1,5 @@
 @import '01-config/variables';
-@import '01-config/mixins';
+@import '01-config/mixins/mixins';
 @import '01-config/fonts';
 
 //// 02 BASE ////
@@ -7,5 +7,5 @@
 
 //// 04 GLOBALS ////
 @import '04-globals/layout';
-@import '04-globals/header';
+@import '04-globals/header/header';
 @import '04-globals/_first-section';

@@ -1,16 +1,5 @@
-//// MediaQueries ////
-@mixin mobile {
-    @media (max-width: 767px) { @content; }
-}
-@mixin tablet {
-    @media (min-width: 768px) { @content; }
-}
-@mixin laptopS {
-    @media (min-width: 1024px) { @content; }
-}
-@mixin laptopL {
-    @media (min-width: 1440px) { @content; }
-}
+@import './svg-icons';
+@import './mediaqueries';
 
 
 //// Main Grid ////
@@ -68,3 +57,5 @@
     left: 50%; 
     transform: translate(-50%, -50%);
 }
+
+ 
