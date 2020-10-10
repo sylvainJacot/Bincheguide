@@ -52,9 +52,8 @@
 }
 
 //// Transitions ////
-@mixin basictransion01 {
-    transition: .3s ease-out;
-}
-@mixin basictransion02 {
-    transition: .1s ease-out;
+
+@mixin basictransition($duration, $delay){
+    transition: all $duration ease-in;
+    transition-delay: $delay;
 }
