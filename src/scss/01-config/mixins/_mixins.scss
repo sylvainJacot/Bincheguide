@@ -1,16 +1,5 @@
-//// MediaQueries ////
-@mixin mobile {
-    @media (max-width: 767px) { @content; }
-}
-@mixin tablet {
-    @media (min-width: 768px) { @content; }
-}
-@mixin laptopS {
-    @media (min-width: 1024px) { @content; }
-}
-@mixin laptopL {
-    @media (min-width: 1440px) { @content; }
-}
+@import './svg-icons';
+@import './mediaqueries';
 
 
 //// Main Grid ////
@@ -23,7 +12,7 @@
         grid-template-columns: repeat(6, 1fr);
     }
     @include laptopS {
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(10, 1fr);
     }
     @include laptopL {
         grid-template-columns: repeat(12, 1fr);
@@ -47,14 +36,29 @@
         padding: 0px 56px;
     }
     @include laptopS {
+        padding: 0px 112px;
+    }
+    @include laptopL {
         padding: 0px 136px;
     }
 }
 
 //// Transitions ////
-@mixin basictransion01 {
-    transition: .3s ease-out;
+
+@mixin basictransition($duration, $delay){
+    transition: all $duration ease-in;
+    transition-delay: $delay;
 }
-@mixin basictransion02 {
-    transition: .1s ease-out;
+
+
+//// Absolute position ////
+
+@mixin absolutecenter($content : ""){
+    position: absolute;
+    content: $content;
+    top: 50%;  
+    left: 50%; 
+    transform: translate(-50%, -50%);
 }
+
+ 

@@ -14,7 +14,6 @@ time, mark, audio, video {
   margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
 	font: inherit;
     vertical-align: baseline;
     box-sizing: border-box;
@@ -369,4 +368,8 @@ textarea {
 button:active, button:focus {
     outline: none !important;;
     border: none !important;;
+}
+
+html {
+    font-size: 8px;
 }

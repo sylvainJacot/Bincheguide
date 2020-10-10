@@ -1,0 +1,66 @@
+.secondary-navigation {
+    display: flex;
+    flex-direction: column;
+    @include laptopS {
+        display: flex;
+        flex-direction: row;
+    }
+
+    div{
+        @include laptopS {
+            display: flex;
+        }
+        li {
+            a {
+                text-decoration: none;
+                color: $black;
+                @include textbold($size : 3rem, $weight: 700);
+
+                @include laptopS {
+                    @include textbold($size : 1.5rem);
+                }
+            }
+        }
+    }
+    .secondary-navigation-left {
+        @include laptopS {
+            margin-right: 6rem;
+        }
+        @include laptopL {
+            margin-right: 8rem;
+        }
+        li {
+            a{
+                @include laptopS {
+                    @include textbold($size : 1.5rem, $weight: 500);
+                }
+            }
+        }
+        li:first-child {
+            @include laptopS {
+                margin-right: 1rem;
+            }
+            @include laptopL {
+                margin-right: 2rem;
+            }
+        }
+    }
+    .secondary-navigation-right {
+        li {
+            a{
+                @include laptopS {
+                    @include textbold($size : 1.5rem, $weight: 400);
+                }
+            }
+        }
+        li:first-child {
+            @include laptopS {
+                margin-right: 1rem;
+            }
+            @include laptopL {
+                margin-right: 2rem;
+            }
+        }
+    }
+
+}

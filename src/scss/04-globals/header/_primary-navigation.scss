@@ -1,0 +1,99 @@
+.primary-navigation {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+
+    @include laptopS {
+        flex-direction: row;
+    }
+
+    .primary-navigation-item-container{
+    position: relative;
+    height: 100%;
+        @include laptopS {
+            width: unset;
+        }
+    }
+
+}
+
+.primary-navigation-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    @include textbold($size : 3rem, $weight: 700);
+    color: $black;
+    margin-bottom: 16px;
+    cursor: pointer;
+
+    @include laptopS {
+        @include textbold($size : 1.5rem, $weight: 700);
+        padding: unset;
+        margin-right: 3rem;
+        margin-bottom: 0;
+    }
+}
+
+.dropdown-content {
+    display: none;
+    @include textbold(3rem);
+    transform: translateY(-24px);
+    @include basictransition($duration : .3s, $delay: 0);
+    li {
+        a {
+            text-decoration: none;
+            color: $black;
+        }
+    }
+}
+
+.primary-navigation-item-container:hover .primary-navigation-item{
+    opacity: .5;
+ }
+
+.primary-navigation-item-container:hover  .dropdown-content{
+display: flex;
+flex-direction: column;
+transform: translateX(0);
+transform: translateY(0px);
+@include basictransition($duration : .3s, $delay: 0);
+
+    @include laptopS {
+        position: absolute;
+        width: fit-content;
+        background-color: yellow;
+        padding: 2rem;
+        transform: translateX(-2rem);
+        @include basictransition($duration : .3s, $delay: 0);
+
+        > li {
+            width: max-content;
+        }
+    }
+}
+
+.arrow-container {
+    display: block;
+    position: absolute;
+    width: 3rem;
+    height: 100%;
+    right: -3rem;
+    @include svg-arrow($color : "rgb(234, 91, 12)");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 2rem;
+    transform: rotate(0deg);
+    @include basictransition($duration : .1s, $delay: 0);
+
+    @include laptopS {
+        width: 2rem;
+        background-size: 1rem;
+        right: -2rem;
+    }
+}
+
+.primary-navigation-item-container:hover  .arrow-container{
+    transform: rotate(180deg);
+    @include basictransition($duration : .3s, $delay: 0);
+}
