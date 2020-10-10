@@ -1,0 +1,17 @@
+@import './welcome-binche';
+
+.first-section {
+    background-color: $secondary-color;
+    @include bodyPadding;
+    @include grid;
+    grid-template-areas: "welcome  welcome"
+                        " subtitle subtitle" ;
+   
+
+    h2 {
+        @include PoppinsFont($size:3rem, $weight:700);
+        grid-row: 2;
+        grid-area: subtitle;
+        margin-top: 6rem;
+    }
+}

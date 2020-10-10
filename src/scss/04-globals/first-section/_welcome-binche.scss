@@ -1,0 +1,30 @@
+.welcome-binche {
+    grid-row: 1;
+    grid-area: welcome;
+
+    .welcome-binche-title{
+        position: relative;
+        align-items: end;
+        display: flex;
+        flex-direction: column;
+        img:first-child {
+            height: 4rem;
+            margin-bottom: 1rem;
+        }
+        img {
+            height: 5rem;
+        }
+    }
+    .welcome-binche-title:after {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 20rem;
+        height: 20rem;
+        background-color: $primary-color;
+        border-radius: 50%;
+        bottom: 10rem;
+        left: -5rem;
+        transform: translate(-50%, -50%);
+    }
+}
