@@ -7,41 +7,67 @@
         flex-direction: row;
     }
 
-    .primary-navigation-item {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        width: fit-content;
-        @include textbold($size : 3rem);
-        margin-bottom: 16px;
+    .primary-navigation-item-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    }
 
-        @include laptopS {
-            @include textbold($size : 2rem);
-            padding: unset;
-            margin-right: 3rem;
-            margin-bottom: 0;
+}
+
+.primary-navigation-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    @include textbold($size : 3rem);
+    margin-bottom: 16px;
+    cursor: pointer;
+
+    @include laptopS {
+        @include textbold($size : 2rem);
+        padding: unset;
+        margin-right: 3rem;
+        margin-bottom: 0;
+    }
+}
+
+.dropdown-content {
+    display: none;
+    @include textbold(3rem);
+    transform: translateY(-24px);
+    @include basictransition($duration : .3s, $delay: 0);
+    li {
+        a {
+            text-decoration: none;
+            color: $black;
         }
     }
-    .primary-navigation-item:hover > .dropdown-content{
-        display: flex;
-        flex-direction: column;
-        transform: translateX(0);
+}
+
+.primary-navigation-item-container:hover .primary-navigation-item{
+    opacity: .5;
+ }
+
+.primary-navigation-item-container:hover  .dropdown-content{
+display: flex;
+flex-direction: column;
+transform: translateX(0);
+transform: translateY(0px);
+@include basictransition($duration : .3s, $delay: 0);
+
+    @include laptopS {
+        position: absolute;
+        width: fit-content;
+        background-color: yellow;
+        padding: 2rem;
+        transform: translateX(-2rem);
         @include basictransition($duration : .3s, $delay: 0);
 
-        @include laptopS {
-            position: absolute;
-            width: fit-content;
-            background-color: yellow;
-            padding: 2rem;
-            transform: translateX(-2rem);
-            @include basictransition($duration : .3s, $delay: 0);
-
-            > li {
-                width: max-content;
-            }
+        > li {
+            width: max-content;
         }
     }
-
 }
 
 .arrow-container {
@@ -54,9 +80,11 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 2rem;
+    transform: rotate(0deg);
+    @include basictransition($duration : .1s, $delay: 0);
 }
 
-.dropdown-content {
-    display: none;
-
+.primary-navigation-item-container:hover  .arrow-container{
+    transform: rotate(180deg);
+    @include basictransition($duration : .3s, $delay: 0);
 }
