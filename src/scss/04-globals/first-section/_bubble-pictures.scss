@@ -1,0 +1,13 @@
+//// Bubble sizes
+$bsS: 10rem;
+
+.bubble-pictures{
+    display: block;
+    width: $bsS;
+    height: $bsS;
+    border-radius: calc(#{$bsS} / 2);
+    background-color: slategray;
+    background-image: url('../../../../src/images//iStock-513550806.png');
+    background-position: center;
+    background-size: contain;
+}

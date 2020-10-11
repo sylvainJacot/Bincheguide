@@ -1,6 +1,19 @@
 .welcome-binche {
     grid-row: 1;
     grid-area: welcome;
+    margin-bottom: 2rem;
+
+    @include mobileL {
+        margin-bottom: 3rem;
+    }
+
+    @include tablet {
+        margin-bottom: 10rem;
+    }
+
+    @include laptopS {
+        margin-bottom: 13rem;
+    }
 
     .welcome-binche-title{
         position: relative;

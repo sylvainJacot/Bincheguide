@@ -2,21 +2,30 @@
 $sbS : 4rem;
 $sbhoverS: 36rem;
 
+$sbL : 6rem;
+$sbhoverL: 36rem;
+
 .search-box {
     position: relative;
     grid-row: 2;
     grid-area: search;
     width: $sbS;
     height: $sbS;
-    border-radius: 2rem;
+    border-radius: calc(#{$sbS} / 2);
     background-color: $tertiary-color;
     @include magnifyglass($color : "$black");
     background-position: center ;
     background-repeat: no-repeat;
-    background-size: 2rem;
+    background-size: calc(#{$sbS} / 2);
     cursor: pointer;
     display: flex;
     @include basictransition($delay: .3s);
+
+    @include tablet {
+        width: $sbL;
+        height: $sbL;
+        border-radius: calc(#{$sbL} / 2);
+    }
 
     .search-box-input {
         position: absolute;
@@ -27,6 +36,11 @@ $sbhoverS: 36rem;
         padding: .5rem 2rem;
         @include PoppinsFont($size : 2rem, $weight: 600);
         @include basictransition($delay: .3s);
+
+        &::placeholder {
+            opacity: 0;
+            @include basictransition($delay: 1s);
+        }
     }
     label {
         position: absolute;
@@ -37,6 +51,10 @@ $sbhoverS: 36rem;
         margin-left: calc(#{$sbS} + 1rem);
         @include basictransition($duration:.1s,$delay: .6s);
         opacity: 1;
+
+        @include tablet {
+            margin-left: calc(#{$sbL} + 2rem);
+        }
     }
 
     &:hover {
@@ -47,12 +65,21 @@ $sbhoverS: 36rem;
         .search-box-input {
             display: block;
             @include basictransition;
+
+            &::placeholder {
+                opacity: .5;
+                @include basictransition($delay: 1s);
+            }
         }
         
         label {
             margin-left: calc(#{$sbhoverS} + 1rem);
             @include basictransition($duration:.1s);
             opacity: 0;
+
+            @include tablet {
+                margin-left: calc(#{$sbhoverL} + 2rem);
+            }
         }
     }
 }
