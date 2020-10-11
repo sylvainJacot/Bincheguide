@@ -10,11 +10,11 @@
                         " subtitle subtitle" ;
 
     @include tablet {
-        grid-template-areas: ". welcome welcome welcome welcome welcome";  
+        grid-template-areas: "welcome welcome welcome welcome welcome welcome";  
         padding-top: 8rem;
     }
     @include laptopS {
-        grid-template-areas: ". . welcome welcome welcome welcome welcome welcome welcome welcome"; 
+        grid-template-areas: "welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome"; 
         padding-top: 10rem;
     }
     @include laptopL {
@@ -23,10 +23,25 @@
     }
    
     h2 {
-        @include PoppinsFont($size:3rem, $weight:700);
+        @include PoppinsFont($size:2rem, $weight:700);
         grid-row: 2;
         grid-area: subtitle;
-        margin-top: 6rem;
-        z-index: 999;
+        margin-top: 4rem;
+        width: 75%;
+        @include mobileL {
+            width: 50%;
+        }
+        @include tablet {
+            margin-top: 10rem;
+            width: 50%;
+            @include PoppinsFont($size:3rem, $weight:600);
+        }
+        @include laptopS {
+            margin-top: 11rem;
+            width: 40rem;
+        }
+        @include laptopL {
+            margin-top: 15rem;
+        }
     }
 }
