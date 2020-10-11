@@ -6,6 +6,7 @@ $sbL : 6rem;
 $sbhoverL: 36rem;
 
 .search-box {
+    z-index: 1;
     position: relative;
     grid-row: 2;
     grid-area: search;
@@ -25,6 +26,9 @@ $sbhoverL: 36rem;
         width: $sbL;
         height: $sbL;
         border-radius: calc(#{$sbL} / 2);
+    }
+    @include laptopS {
+        background-size: calc(#{$sbL} / 2);
     }
 
     .search-box-input {

@@ -7,10 +7,14 @@
     @include bodyPadding;
     @include grid;
     padding-top: 4rem;
-    height: calc(40rem - 4rem);
+    height: calc(50rem - 4rem);
     grid-template-rows: max-content;
     grid-template-areas: "welcome  welcome"
     "search search";
+
+   @include mobileL {
+    height: calc(43rem - 4rem);
+   }
 
     @include tablet {
         grid-template-areas: "welcome welcome welcome welcome welcome welcome"  
@@ -24,8 +28,8 @@
         height: calc(112rem - 10rem);
     }
     @include laptopL {
-        grid-template-areas: ". . welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome"
-                             ". . search search . . . . . . . .";
+        grid-template-areas: ". welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome"
+                             ". search search search . . . . . . . .";
         padding-top: 14rem;
         height: calc(112rem - 14rem);
     }
