@@ -1,0 +1,7 @@
+
+.magnet {
+    @include basictransition($delay:.3s);
+}
+.magnet-mouse-active {
+    @include basictransition;
+}

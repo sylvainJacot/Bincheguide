@@ -5,4 +5,4 @@ burger_ic.addEventListener('click',togglemenu);
 function togglemenu() {
     burger_ic.classList.toggle("burger-active");
     main_navigation.classList.toggle("nav-active")
-}
+};

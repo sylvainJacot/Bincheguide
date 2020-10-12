@@ -5,6 +5,10 @@
 //// 02 BASE ////
 @import '02-base/resets';
 
+//// 03 OBJECTS////
+@import '03-objects/magnet-follow';
+@import '03-objects/cursor';
+
 //// 04 GLOBALS ////
 @import '04-globals/layout';
 @import '04-globals/header/header';

@@ -6,7 +6,10 @@
     <title>Binche</title>
     <link rel="stylesheet" type="text/css" href="dist/css/styles.css" />
 </head>
+
 <body>
+    <!-- ////////////  CURSOR  //////////// -->
+    <div class="cursor"></div>
     <!-- ////////////  HEADER  //////////// -->
     <header class="main-header">
         <div class="binchelogo">
@@ -21,11 +24,11 @@
             <span class="stick"></span>
             <span class="stick"></span>
         </button>
-        <nav class="main-navigation" id="main-navigation">
+        <nav class="main-navigation nav-links" id="main-navigation">
             <ul class="primary-navigation">
 
                     <div class="primary-navigation-item-container">
-                        <li class="primary-navigation-item">
+                        <li class="primary-navigation-item ">
                             Ma ville
                             <span class="arrow-container"></span>
                         </li>
@@ -37,7 +40,7 @@
                     </div>
 
                     <div class="primary-navigation-item-container">
-                        <li class="primary-navigation-item">
+                        <li class="primary-navigation-item  ">
                             Vivre à Binche
                             <span class="arrow-container"></span>
                         </li>
@@ -49,7 +52,7 @@
                     </div>
 
                     <div class="primary-navigation-item-container">
-                        <li class="primary-navigation-item">
+                        <li class="primary-navigation-item  ">
                             Que faire à Binche
                             <span class="arrow-container"></span>
                         </li>
@@ -62,18 +65,18 @@
             </ul>
             <ul class="secondary-navigation">
                 <div class="secondary-navigation-left">
-                    <li>
+                    <li class=" ">
                         <a href="">Je suis</a>
                     </li>
-                    <li>
+                    <li class=" ">
                         <a href="">Je trouve</a>
                     </li>
                 </div>
-                <div class="secondary-navigation-right">
-                    <li>
+                <div class="secondary-navigation-right ">
+                    <li class=" ">
                         <a href="">Se connecter</a>
                     </li>
-                    <li>
+                    <li class=" ">
                         <a href="">contact</a>
                     </li>
                 </div>
@@ -89,7 +92,7 @@
                 <img src="./src/icons/Bienvenue à.svg" alt="Binche text with a Gill instead of the 'i' letter and the Binche church instead the 'h' letter" title="Binche text with icons"/>
                 <div class="welcome-binche-title-secondline">
                     <img src="./src/icons/Binche-Icon-nodotes.svg" alt="Binche text with a Gill instead of the 'i' letter and the Binche church instead the 'h' letter" title="Binche text with icons"/>
-                    <div class="three-dots"><span></span><span></span><span></span></div>
+                    <div class="three-dots"><span class="dot-item"></span><span class="dot-item"></span><span class="dot-item"></span></div>
                 </div>
             </div>
 
@@ -105,7 +108,14 @@
         </div>
     </main>
 
+
+    <!-- ////////////  ANIMATIONS - JS  //////////// -->
+    <script src="https://cdn.jsdelivr.net/gh/fluffy-factory/-mouse@latest/lib/-mouse.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./src/js/scroll-reveal.js"></script>
+    <script src="./src/js/animation-.js"></script>
     <script src="./src/js/menu-icon.js"></script>
+    <script src="./src/js/cursor.js"></script>
 
 </body>
 </html>
