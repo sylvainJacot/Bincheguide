@@ -36,6 +36,7 @@
                 margin-bottom: 0;
             }
             a{
+                @include PoppinsFont($size : 3rem, $weight: 500);
                 @include laptopS {
                     @include PoppinsFont($size : 1.5rem, $weight: 500);
                 }
@@ -62,6 +63,7 @@
                 margin-bottom: 0;
             }
             a{
+                @include PoppinsFont($size : 3rem, $weight: 400);
                 @include laptopS {
                     @include PoppinsFont($size : 1.5rem, $weight: 400);
                 }

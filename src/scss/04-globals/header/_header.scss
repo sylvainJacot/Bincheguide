@@ -113,6 +113,10 @@ z-index: 2;
     padding-top: 3rem;
     clip-path: circle(140% at 88% -24px);
     @include basictransition($duration : .3s, $delay: 0s);
+
+    @include tablet {
+        padding-top: 6rem;
+    }
 }
 
 

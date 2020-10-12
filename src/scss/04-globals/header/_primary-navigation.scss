@@ -14,6 +14,9 @@
         background-color: $white;
         opacity: .3;
         z-index: -1;    
+        @include laptopS {
+            display: none;
+        }
         }
 
     @include laptopS {
@@ -55,7 +58,10 @@
     @include basictransition($duration : .3s, $delay: 0s);
 
     @include laptopS {
+        position: absolute;
         margin-bottom: 0;
+        clip-path: inset(0 0 100% 0);
+        min-width: 16rem;
     }
 
     li {
@@ -64,7 +70,13 @@
             cursor: none;
             text-decoration: none;
             color: $black;
-             font-size: 2.5rem;
+
+            @include laptopS {
+            font-size: 1.5rem;
+            }
+        }
+        :hover {
+            color: $primary-color;
         }
     }
 }
@@ -77,16 +89,18 @@
 display: flex;
 flex-direction: column;
 transform: translateX(0);
-transform: translateY(0px);
+transform: translateY(0);
 @include basictransition($duration : .3s, $delay: 0s);
 
     @include laptopS {
-        position: absolute;
         width: fit-content;
-        background-color: yellow;
+        background-color: $white;
         padding: 2rem;
         transform: translateX(-2rem);
+        border-top: 1rem solid $secondary-color;
         @include basictransition($duration : .3s, $delay: 0s);
+        clip-path: inset(0 0 0 0);
+        border-radius: 1rem;
 
         > li {
             width: max-content;
