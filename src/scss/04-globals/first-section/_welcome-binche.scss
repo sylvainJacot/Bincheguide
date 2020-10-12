@@ -35,7 +35,7 @@
                 margin-bottom: 0;
             }
             @include laptopS {
-                height: 7rem;
+                height: 10rem;
             }
         }
         .welcome-binche-title-secondline{
@@ -50,7 +50,7 @@
                     margin-bottom: 0;
                 }
                 @include laptopS {
-                    height: 9rem;
+                    height: 11rem;
                 }
             }
         }
@@ -92,7 +92,7 @@
             width: 40rem;
             height: 40rem;
             bottom: -37rem;
-            left: -8rem;
+            left: -4rem;
         }
     }
     .welcome-binche-title-secondline {
@@ -130,6 +130,9 @@
         }
         @include laptopS {
             height: 9rem; 
+        }
+        @include laptopL {
+            height: 11rem; 
         }
     }
 }

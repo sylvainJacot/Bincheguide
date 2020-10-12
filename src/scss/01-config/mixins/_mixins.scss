@@ -35,16 +35,16 @@
     padding-right: 2rem;
 
     @include tablet {
-            padding-left: 7rem;
-            padding-right: 7rem;
+            padding-left: 5rem;
+            padding-right: 5rem;
     }
     @include laptopS {
-            padding-left: 16rem;
-            padding-right: 16rem;
+            padding-left: 6rem;
+            padding-right: 6rem;
     }
     @include laptopL {
-        padding-left: 17rem;
-        padding-right: 17rem;
+        padding-left: 6rem;
+        padding-right: 6rem;
     }
 }
 
