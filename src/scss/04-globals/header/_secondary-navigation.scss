@@ -41,6 +41,9 @@
                     @include PoppinsFont($size : 1.5rem, $weight: 500);
                 }
             }
+            :hover {
+                color: $primary-color;
+            }
         }
         li:first-child {
             @include laptopS {
@@ -67,6 +70,9 @@
                 @include laptopS {
                     @include PoppinsFont($size : 1.5rem, $weight: 400);
                 }
+            }
+            :hover {
+                color: $primary-color;
             }
         }
         li:first-child {

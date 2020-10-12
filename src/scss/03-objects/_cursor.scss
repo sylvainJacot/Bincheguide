@@ -7,8 +7,7 @@
     position: absolute;
     transform: translate(-50%,-50%);
     pointer-events:none;
-    transition: all .1s ease;
-    transition-delay: .3s;
+    transition: all .5s ease;
     transition-property: background, transform;
     transform-origin: 100% 100%;
     z-index: 99;
@@ -20,6 +19,6 @@
   
   .link-grow {
     border: 1px solid $primary-color;
-    transform: scale(3);
-    transition: all .3s ease;
+    transform: scale(2);
+    transition: all .1s ease;
   }
