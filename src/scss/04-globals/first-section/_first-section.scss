@@ -1,0 +1,60 @@
+@import './welcome-binche';
+@import './_search-bar';
+@import './bubble-pictures';
+
+.first-section {
+    background-color: $secondary-color;
+    @include bodyPadding;
+    @include grid;
+    padding-top: 4rem;
+    height: calc(50rem - 4rem);
+    grid-template-rows: max-content;
+    grid-template-areas: "welcome  welcome"
+    "search search";
+
+   @include mobileL {
+    height: calc(43rem - 4rem);
+   }
+
+    @include tablet {
+        grid-template-areas: "welcome welcome welcome welcome welcome welcome"  
+                             "search search . . . .";  
+        padding-top: 8rem;
+    }
+    @include laptopS {
+        grid-template-areas: "welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome"
+                             "search search . . . . . . . ."; 
+        padding-top: 10rem;
+        height: calc(112rem - 10rem);
+    }
+    @include laptopL {
+        grid-template-areas: ". . welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome"
+                             ". . search search . . . . . . . .";
+        padding-top: 18rem;
+        height: calc(99rem - 18rem);
+
+    }
+   
+    h2 {
+        @include PoppinsFont($size:2rem, $weight:700);
+        grid-row: 2;
+        grid-area: subtitle;
+        margin-top: 4rem;
+        width: 75%;
+        @include mobileL {
+            width: 50%;
+        }
+        @include tablet {
+            margin-top: 10rem;
+            width: 50%;
+            @include PoppinsFont($size:3rem, $weight:600);
+        }
+        @include laptopS {
+            margin-top: 11rem;
+            width: 40rem;
+        }
+        @include laptopL {
+            margin-top: 16rem;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+
+//// Bubble sizes
+$bsS: 20rem;
+
+.bubble-pictures-container {
+    position: absolute;
+    right: 2rem;
+    top: 47rem;
+
+    @include mobileL {
+        right: 2rem;
+        top: 40rem;
+    }
+
+    @include tablet {
+        transform: scale(2);
+        right: 15rem;
+        top: 56rem;
+    }
+    @include laptopL {
+        transform: scale(4);
+        right: 36rem;
+        top: 85rem;
+    
+    }
+
+    .bubble-pictures{
+        position: relative;
+        display: block;
+        width: $bsS;
+        height: $bsS;
+        border-radius: calc(#{$bsS} / 2);
+        background-color: slategray;
+        background-image: url('../../../../src/images//iStock-513550806.png');
+        background-position: center;
+        background-size: contain;
+
+        &::before {
+            display: block;
+            content: "";
+            position: absolute;
+            width: calc(#{$bsS} / 3);
+            height: calc(#{$bsS} / 3);
+            border-radius: calc(#{$bsS} / 1.5);
+            background-color: gray;
+            background-image: url('../../../../src/images/iStock-1058704808.png');
+            background-position: center;
+            background-size: contain;
+            top: calc(#{$bsS} / 2);
+            left: -4rem;
+        }
+        &::after {
+            display: block;
+            content: "";
+            position: absolute;
+            width: calc(#{$bsS} / 6);
+            height: calc(#{$bsS} / 6);
+            border-radius: calc(#{$bsS} / 3);
+            background-color: $primary-color;
+            top: 10rem;
+            right: -1rem;
+        }
+    }
+}

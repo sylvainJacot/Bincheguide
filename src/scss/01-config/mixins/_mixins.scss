@@ -31,21 +31,26 @@
     }
 }
 @mixin bodyPadding {
-    padding: 0px 16px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
     @include tablet {
-        padding: 0px 56px;
+            padding-left: 5rem;
+            padding-right: 5rem;
     }
     @include laptopS {
-        padding: 0px 112px;
+            padding-left: 6rem;
+            padding-right: 6rem;
     }
     @include laptopL {
-        padding: 0px 136px;
+        padding-left: 6rem;
+        padding-right: 6rem;
     }
 }
 
 //// Transitions ////
 
-@mixin basictransition($duration, $delay){
+@mixin basictransition($duration:.3s, $delay:0s){
     transition: all $duration ease-in;
     transition-delay: $delay;
 }

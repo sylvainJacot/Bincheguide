@@ -1,0 +1,138 @@
+.welcome-binche {
+    grid-row: 1;
+    grid-area: welcome;
+    margin-bottom: 2rem;
+
+    @include mobileL {
+        margin-bottom: 3rem;
+    }
+
+    @include tablet {
+        margin-bottom: 10rem;
+    }
+
+    @include laptopS {
+        margin-bottom: 13rem;
+    }
+
+    .welcome-binche-title{
+        position: relative;
+        align-items: end;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+
+        img:first-child {
+            height: 4rem;
+            margin-bottom: 1rem;
+
+            @include mobileL {
+                height: 5rem;
+                margin-bottom: 1rem;
+            }
+            @include tablet {
+                height: 6rem;
+                margin-bottom: 0;
+            }
+            @include laptopS {
+                height: 10rem;
+            }
+        }
+        .welcome-binche-title-secondline{
+            img {
+                height: 5rem;
+                @include mobileL {
+                    height: 6rem;
+                    margin-bottom: 1rem;
+                }
+                @include tablet {
+                    height: 7rem;
+                    margin-bottom: 0;
+                }
+                @include laptopS {
+                    height: 11rem;
+                }
+            }
+        }
+        @include tablet {
+            flex-direction: row;
+            align-items: baseline;
+        }
+
+    }
+    .welcome-binche-title:after {
+        position: absolute;
+        display: block;
+        content: "";
+        z-index: -1;
+        width: 20rem;
+        height: 20rem;
+        background-color: $primary-color;
+        border-radius: 50%;
+        bottom: -15rem;
+        left: -4rem;
+        transform: translate(-50%, -50%);
+        @include mobileL {
+            width: 21rem;
+            height: 21rem;
+        }
+        @include tablet {
+            width: 25rem;
+            height: 25rem;
+            bottom: -23rem;
+            left: -3rem;
+        }
+        @include laptopS {
+            width: 32rem;
+            height: 32rem;
+            bottom: -29rem;
+            left: -7rem;
+        }
+        @include laptopL {
+            width: 40rem;
+            height: 40rem;
+            bottom: -37rem;
+            left: -4rem;
+        }
+    }
+    .welcome-binche-title-secondline {
+        display: flex;
+        @include tablet {
+            margin-left: 3rem;
+        }
+        @include laptopS {
+            margin-left: 4rem;
+        }
+    }
+    .three-dots{
+        display: flex;
+        align-items: flex-end;
+        height: 5rem;
+        span {
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            background-color: $primary-color;
+            border-radius: 50%;
+            margin-left: .5rem;
+
+            @include laptopS {
+            width: 2rem;
+            height: 2rem;
+            margin-left: 1rem;
+            }
+        }
+        @include mobileL {
+            height: 6rem; 
+        }
+        @include tablet {
+            height: 7rem; 
+        }
+        @include laptopS {
+            height: 9rem; 
+        }
+        @include laptopL {
+            height: 11rem; 
+        }
+    }
+}

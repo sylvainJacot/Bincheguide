@@ -22,13 +22,13 @@
     display: flex;
     flex-direction: column;
     width: fit-content;
-    @include textbold($size : 3rem, $weight: 700);
+    @include PoppinsFont($size : 3rem, $weight: 700);
     color: $black;
     margin-bottom: 16px;
     cursor: pointer;
 
     @include laptopS {
-        @include textbold($size : 1.5rem, $weight: 700);
+        @include PoppinsFont($size : 1.5rem, $weight: 700);
         padding: unset;
         margin-right: 3rem;
         margin-bottom: 0;
@@ -37,7 +37,7 @@
 
 .dropdown-content {
     display: none;
-    @include textbold(3rem);
+    @include PoppinsFont(3rem);
     transform: translateY(-24px);
     @include basictransition($duration : .3s, $delay: 0);
     li {

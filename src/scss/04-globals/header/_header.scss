@@ -2,9 +2,10 @@
 @import './secondary-navigation';
 
 .main-header {
-    background-color: $tertiary-color;
+    background-color: $secondary-color;
     position: relative;
     height: 10rem;
+    z-index: 5;
     @include grid;
     grid-template-areas: "logo  menu";
     align-items: center;
@@ -69,6 +70,7 @@ position: relative;
 width: fit-content;
 justify-self: start;
 grid-area: logo;
+z-index: 2;
     h1 {
     display:block;
     font-size: 0;
@@ -87,7 +89,7 @@ grid-area: logo;
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-color: $tertiary-color;
+    background-color: $secondary-color;
     top: 80px;
     clip-path: circle(.5% at 88% -24px);
     @include basictransition($duration : .3s, $delay: 0);
@@ -102,7 +104,6 @@ grid-area: logo;
         align-items: center;
         grid-area: mainnav;
         clip-path: unset;
-        background-color: violet;
         padding: 0;
     }
 

@@ -83,10 +83,26 @@
 
     <!-- ////////////  SECTION 01 - LANDING PAGE  //////////// -->
     <main role="main" class="first-section">
-        <h1>Bienvenue à Binche...</h1>
-        <h2>Une ville proche du citoyen, qui informe au mieux la population de la vie communale</h2>
-        <input type="text" placeholder="Search..">
-        <div class="bubble-picture"></div>
+        <div class="welcome-binche">
+
+            <div class="welcome-binche-title">
+                <img src="./src/icons/Bienvenue à.svg" alt="Binche text with a Gill instead of the 'i' letter and the Binche church instead the 'h' letter" title="Binche text with icons"/>
+                <div class="welcome-binche-title-secondline">
+                    <img src="./src/icons/Binche-Icon-nodotes.svg" alt="Binche text with a Gill instead of the 'i' letter and the Binche church instead the 'h' letter" title="Binche text with icons"/>
+                    <div class="three-dots"><span></span><span></span><span></span></div>
+                </div>
+            </div>
+
+            <h2>Une ville proche du citoyen, qui informe au mieux la population de la vie communale</h2>
+            
+        </div>
+        <form class="search-box">
+            <input type="text" placeholder="Que recherchez-vous?" id="search-box-input" class="search-box-input"/> 
+            <label for="search-box-input">Que cherchez-vous ?</label>
+         </form>
+         <div class="bubble-pictures-container">
+            <div class="bubble-pictures"></div>
+        </div>
     </main>
 
     <script src="./src/js/menu-icon.js"></script>
