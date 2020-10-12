@@ -39,7 +39,7 @@ $sbhoverL: 36rem;
         box-sizing: border-box;
         padding: .5rem 2rem;
         @include PoppinsFont($size : 2rem, $weight: 600);
-        @include basictransition($delay: .3s);
+        @include basictransition($delay: 0s);
 
         &::placeholder {
             opacity: 0;
@@ -53,7 +53,7 @@ $sbhoverL: 36rem;
         transform: translateY(-50%);    
         @include PoppinsFont($size : 2rem, $weight: 600);
         margin-left: calc(#{$sbS} + 1rem);
-        @include basictransition($duration:.1s,$delay: .6s);
+        @include basictransition($duration:0s,$delay: 1s);
         opacity: 1;
 
         @include tablet {
@@ -64,7 +64,7 @@ $sbhoverL: 36rem;
     &:hover {
         width: $sbhoverS;
         background-position: calc(#{$sbhoverS} - 4rem) center;
-        @include basictransition($delay:.3s);
+        @include basictransition($delay:0s);
 
         .search-box-input {
             display: block;
@@ -78,7 +78,7 @@ $sbhoverL: 36rem;
         
         label {
             margin-left: calc(#{$sbhoverS} + 1rem);
-            @include basictransition($duration:.1s);
+            @include basictransition($duration:0s);
             opacity: 0;
 
             @include tablet {
