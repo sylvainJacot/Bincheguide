@@ -3,6 +3,19 @@
     flex-direction: column;
     width: fit-content;
 
+    &::after {
+        position: absolute;
+        content:"";
+        display: block;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: $white;
+        opacity: .3;
+        z-index: -1;    
+        }
+
     @include laptopS {
         flex-direction: row;
     }
@@ -24,7 +37,7 @@
     width: fit-content;
     @include PoppinsFont($size : 3rem, $weight: 700);
     color: $black;
-    margin-bottom: 16px;
+    margin-bottom: 3rem;
 
     @include laptopS {
         @include PoppinsFont($size : 1.5rem, $weight: 700);
@@ -36,14 +49,22 @@
 
 .dropdown-content {
     display: none;
+    margin-bottom: 5rem;
     @include PoppinsFont(3rem);
     transform: translateY(-24px);
-    @include basictransition($duration : .3s, $delay: 0);
+    @include basictransition($duration : .3s, $delay: 0s);
+
+    @include laptopS {
+        margin-bottom: 0;
+    }
+
     li {
+        margin-bottom: 1rem;
         a {
             cursor: none;
             text-decoration: none;
             color: $black;
+             font-size: 2.5rem;
         }
     }
 }
@@ -57,7 +78,7 @@ display: flex;
 flex-direction: column;
 transform: translateX(0);
 transform: translateY(0px);
-@include basictransition($duration : .3s, $delay: 0);
+@include basictransition($duration : .3s, $delay: 0s);
 
     @include laptopS {
         position: absolute;
@@ -65,7 +86,7 @@ transform: translateY(0px);
         background-color: yellow;
         padding: 2rem;
         transform: translateX(-2rem);
-        @include basictransition($duration : .3s, $delay: 0);
+        @include basictransition($duration : .3s, $delay: 0s);
 
         > li {
             width: max-content;
