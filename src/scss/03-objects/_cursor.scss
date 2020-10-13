@@ -5,11 +5,10 @@
     border-radius: 50%;
     border: 2px solid $primary-color;
     position: absolute;
-    transform: translate(-50%,-50%);
     pointer-events:none;
-    transition: all .5s ease;
-    transition-property: background, transform;
-    transform-origin: 100% 100%;
+    transition: all .2s ease;
+    transform-origin: 0 0;
+
     z-index: 99;
 
     @include laptopS {
@@ -20,5 +19,12 @@
   .link-grow {
     border: 1px solid $primary-color;
     transform: scale(2);
-    transition: all .1s ease;
+    border-style: dashed;
+    transition: all .1s ease infinite;
+    animation: rotating 2s linear infinite;
+  }
+
+  @keyframes rotating {
+    from {transform: scale(2)  rotate(0deg) translate(-50%,-50%); transform-origin: 0 0;}
+    to {transform: scale(2)  rotate(360deg) translate(-50%,-50%); transform-origin: 0 0;}
   }
