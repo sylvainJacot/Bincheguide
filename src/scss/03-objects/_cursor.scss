@@ -7,9 +7,20 @@
     position: absolute;
     pointer-events:none;
     transition: all .2s ease;
-    transform-origin: 0 0;
-
     z-index: 99;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 1rem solid $white;
+      opacity: .3;
+      top: calc((-24px / 2) + 3px);
+      left: calc((-24px/ 2) + 3px);
+      z-index: 1;
+    }
 
     @include laptopS {
       display: block;
@@ -18,13 +29,23 @@
   
   .link-grow {
     border: 1px solid $primary-color;
-    transform: scale(2);
     border-style: dashed;
     transition: all .1s ease infinite;
     animation: rotating 2s linear infinite;
   }
 
-  @keyframes rotating {
+
+  .clickexpand {
+    animation: expand .3s forwards;
+  }
+
+@keyframes rotating {
     from {transform: scale(2)  rotate(0deg) translate(-50%,-50%); transform-origin: 0 0;}
     to {transform: scale(2)  rotate(360deg) translate(-50%,-50%); transform-origin: 0 0;}
   }
+
+@keyframes expand {
+  0%{transform: scale(1)}
+  50%{transform: scale(3)}
+  100%{transform: scale(1); opacity: 0;}
+} 

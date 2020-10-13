@@ -5,7 +5,7 @@ window.addEventListener("mousemove", cursor);
 
 function cursor(e){
   mouseCursor.style.top = e.pageY + 'px';
-    mouseCursor.style.left = e.pageX + 'px';
+  mouseCursor.style.left = e.pageX + 'px';
 }
 
 navLinks.forEach(link => {
@@ -16,3 +16,10 @@ navLinks.forEach(link => {
     mouseCursor.classList.add('link-grow');
   });
 });
+
+document.addEventListener('click', () => {
+  mouseCursor.classList.add('clickexpand');
+  setTimeout(() => {
+    mouseCursor.classList.remove('clickexpand')
+  }, 300)
+})
