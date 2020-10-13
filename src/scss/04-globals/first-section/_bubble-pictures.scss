@@ -8,7 +8,8 @@ $bsS: 20rem;
     top: 47rem;
 
     @include mobileL {
-        right: 2rem;
+        transform: scale(1.6);
+        right: 5rem;
         top: 40rem;
     }
 
@@ -17,6 +18,7 @@ $bsS: 20rem;
     right: 20rem;
     top: 56rem;
     }
+
 
     @include laptopS {
     transform: scale(3.1);
@@ -62,7 +64,7 @@ $bsS: 20rem;
             position: absolute;
             width: calc(#{$bsS} / 6);
             height: calc(#{$bsS} / 6);
-            border-radius: calc(#{$bsS} / 3);
+            border-radius: 50%;
             background-color: $primary-color;
             top: 10rem;
             right: -1rem;

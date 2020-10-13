@@ -4,7 +4,7 @@ var slideUp = {
     duration: 1000,
     opacity: 0,
     mobile: false,
-    delay: 1000,
+    delay: 2000,
 };
 
 ScrollReveal().reveal('.welcome-binche', slideUp);
