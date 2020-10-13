@@ -20,12 +20,13 @@
         grid-template-areas: "welcome welcome welcome welcome welcome welcome"  
                              "search search . . . .";  
         padding-top: 8rem;
+        height: calc(64rem - 8rem);
     }
     @include laptopS {
-        grid-template-areas: "welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome"
-                             "search search . . . . . . . ."; 
+        grid-template-areas: ". welcome welcome welcome welcome welcome welcome welcome welcome welcome"
+                             ". search search . . . . . . ."; 
         padding-top: 10rem;
-        height: calc(112rem - 10rem);
+        height: calc(75rem - 10rem);
     }
     @include laptopL {
         grid-template-areas: ". . welcome welcome welcome welcome welcome welcome welcome welcome welcome welcome"
