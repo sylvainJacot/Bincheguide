@@ -1,9 +1,6 @@
 let magnet = document.querySelector(".magnetic");
-let maintitle = document.querySelector('.welcome-binche-title');
-let orangecircle = window.getComputedStyle(maintitle, '::before');
-let strength = 10;
+let strength = 2;
 
-console.log(orangecircle);
 
   magnet.addEventListener("mousemove", moveMagnet);
   magnet.addEventListener("mouseout", function (event) {

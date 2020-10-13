@@ -15,21 +15,23 @@
         margin-bottom: 13rem;
 
         :hover .dot-item {
-            animation: bouncing 0.3s alternate infinite cubic-bezier(.6,.05,.15,.95);
+            animation: bouncing 0.3s alternate infinite cubic-bezier(.6, .05, .15, .95);
 
             &:nth-child(1) {
                 animation-delay: 0s;
             }
+
             &:nth-child(2) {
                 animation-delay: 0.2s;
             }
+
             &:nth-child(3) {
                 animation-delay: 0.4s;
             }
         }
     }
 
-    .welcome-binche-title{
+    .welcome-binche-title {
         position: relative;
         align-items: end;
         display: flex;
@@ -44,36 +46,44 @@
                 height: 5rem;
                 margin-bottom: 1rem;
             }
+
             @include tablet {
                 height: 6rem;
                 margin-bottom: 0;
             }
+
             @include laptopS {
                 height: 10rem;
             }
         }
-        .welcome-binche-title-secondline{
+
+        .welcome-binche-title-secondline {
             img {
                 height: 5rem;
+
                 @include mobileL {
                     height: 6rem;
                     margin-bottom: 1rem;
                 }
+
                 @include tablet {
                     height: 7rem;
                     margin-bottom: 0;
                 }
+
                 @include laptopS {
                     height: 11rem;
                 }
             }
         }
+
         @include tablet {
             flex-direction: row;
             align-items: baseline;
         }
 
     }
+
     .welcome-binche-title:after {
         position: absolute;
         display: block;
@@ -91,18 +101,21 @@
             width: 21rem;
             height: 21rem;
         }
+
         @include tablet {
             width: 25rem;
             height: 25rem;
             bottom: -23rem;
             left: -3rem;
         }
+
         @include laptopS {
             width: 32rem;
             height: 32rem;
             bottom: -29rem;
             left: -7rem;
         }
+
         @include laptopL {
             width: 40rem;
             height: 40rem;
@@ -110,19 +123,24 @@
             left: -4rem;
         }
     }
+
     .welcome-binche-title-secondline {
         display: flex;
+
         @include tablet {
             margin-left: 3rem;
         }
+
         @include laptopS {
             margin-left: 4rem;
         }
     }
-    .three-dots{
+
+    .three-dots {
         display: flex;
         align-items: flex-end;
         height: 5rem;
+
         .dot-item {
             display: block;
             width: 1rem;
@@ -132,34 +150,36 @@
             margin-left: .5rem;
 
             @include laptopS {
-            width: 2rem;
-            height: 2rem;
-            margin-left: 1rem;
+                width: 2rem;
+                height: 2rem;
+                margin-left: 1rem;
             }
         }
+
         @include mobileL {
-            height: 6rem; 
+            height: 6rem;
         }
+
         @include tablet {
-            height: 7rem; 
+            height: 7rem;
         }
+
         @include laptopS {
-            height: 9rem; 
+            height: 9rem;
         }
+
         @include laptopL {
-            height: 11rem; 
+            height: 11rem;
         }
     }
 }
 
 @keyframes bouncing {
 
-	0% {
-		transform: translate3d(0, 10px, 0) scale(1.2, 0.85);
-	}
-
-	100% {
-		transform: translate3d(0, -20px, 0) scale(0.9, 1.1);
-	}
-};
-
+    0% {
+        transform: translate3d(0, 10px, 0) scale(1.2, 0.85);
+    }
+    100% {
+        transform: translate3d(0, -20px, 0) scale(0.9, 1.1);
+    }
+}

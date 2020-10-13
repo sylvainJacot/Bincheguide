@@ -26,7 +26,6 @@
     font-weight: 700;
 }
 
-
 @mixin PoppinsFont($size:2rem, $line-height:1.5, $weight:500, $letter-spacing: 0) {
     font-family: 'Poppins', sans-serif;
     font-size: $size;

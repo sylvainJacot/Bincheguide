@@ -15,7 +15,7 @@ $sbhoverL: 36rem;
     border-radius: calc(#{$sbS} / 2);
     background-color: $tertiary-color;
     @include magnifyglass($color : "$black");
-    background-position: center ;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: calc(#{$sbS} / 2);
     cursor: pointer;
@@ -27,6 +27,7 @@ $sbhoverL: 36rem;
         height: $sbL;
         border-radius: calc(#{$sbL} / 2);
     }
+
     @include laptopS {
         background-size: calc(#{$sbL} / 2);
     }
@@ -46,14 +47,15 @@ $sbhoverL: 36rem;
             @include basictransition($delay: 1s);
         }
     }
+
     label {
         position: absolute;
         width: max-content;
         top: 50%;
-        transform: translateY(-50%);    
+        transform: translateY(-50%);
         @include PoppinsFont($size : 2rem, $weight: 600);
         margin-left: calc(#{$sbS} + 1rem);
-        @include basictransition($duration:0s,$delay: 1s);
+        @include basictransition($duration:.3s, $delay: .3s);
         opacity: 1;
 
         @include tablet {
@@ -75,10 +77,10 @@ $sbhoverL: 36rem;
                 @include basictransition($delay: 1s);
             }
         }
-        
+
         label {
             margin-left: calc(#{$sbhoverS} + 1rem);
-            @include basictransition($duration:0s);
+            @include basictransition($duration:.3s);
             opacity: 0;
 
             @include tablet {
