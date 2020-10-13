@@ -91,8 +91,9 @@ z-index: 2;
     height: 100vh;
     background-color: $secondary-color;
     top: 80px;
+    
     clip-path: circle(.5% at 88% -24px);
-    @include basictransition($duration : .3s, $delay: 0);
+    @include basictransition($duration : .3s, $delay: 0s);
 
     @include laptopS {
         display: flex;
@@ -109,8 +110,14 @@ z-index: 2;
 
 }
 .nav-active {
+    padding-top: 3rem;
     clip-path: circle(140% at 88% -24px);
-    @include basictransition($duration : .3s, $delay: 0);
+    @include basictransition($duration : .3s, $delay: 0s);
+
+    @include tablet {
+        padding-top: 6rem;
+    }
 }
+
 
 

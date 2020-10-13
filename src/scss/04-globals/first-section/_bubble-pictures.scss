@@ -8,15 +8,24 @@ $bsS: 20rem;
     top: 47rem;
 
     @include mobileL {
-        right: 2rem;
+        transform: scale(1.6);
+        right: 5rem;
         top: 40rem;
     }
 
     @include tablet {
-        transform: scale(2);
-        right: 15rem;
-        top: 56rem;
+    transform: scale(2.6);
+    right: 20rem;
+    top: 56rem;
     }
+
+
+    @include laptopS {
+    transform: scale(3.1);
+    right: 26rem;
+    top: 64rem;
+    }
+
     @include laptopL {
         transform: scale(4);
         right: 36rem;
@@ -55,16 +64,17 @@ $bsS: 20rem;
             position: absolute;
             width: calc(#{$bsS} / 6);
             height: calc(#{$bsS} / 6);
-            border-radius: calc(#{$bsS} / 3);
+            border-radius: 50%;
             background-color: $primary-color;
             top: 10rem;
             right: -1rem;
+            animation: floating 2s infinite ease;
         }
     }
 }
 
 @keyframes floating {
     0% {transform: translateY(0);}
-    50% {transform: translateY(4%);}
+    50% {transform: translateY(10%);}
     100% {transform: translateY(0)};
 }

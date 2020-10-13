@@ -31,10 +31,18 @@
             margin-right: 8rem;
         }
         li {
+            margin-bottom: 1rem;
+            @include  laptopS{
+                margin-bottom: 0;
+            }
             a{
+                @include PoppinsFont($size : 3rem, $weight: 500);
                 @include laptopS {
                     @include PoppinsFont($size : 1.5rem, $weight: 500);
                 }
+            }
+            :hover {
+                color: $primary-color;
             }
         }
         li:first-child {
@@ -47,11 +55,24 @@
         }
     }
     .secondary-navigation-right {
+        
+        margin-top: 3rem;
+        @include laptopS {
+            margin-top: 0rem;
+        }
         li {
+            margin-bottom: 1rem;
+            @include  laptopS{
+                margin-bottom: 0;
+            }
             a{
+                @include PoppinsFont($size : 3rem, $weight: 400);
                 @include laptopS {
                     @include PoppinsFont($size : 1.5rem, $weight: 400);
                 }
+            }
+            :hover {
+                color: $primary-color;
             }
         }
         li:first-child {
