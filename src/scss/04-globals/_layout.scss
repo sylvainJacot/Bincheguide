@@ -47,6 +47,10 @@ body {
     0% {
         opacity: 1;
     }
+    80% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
     90% {
         opacity: 1;
@@ -55,6 +59,7 @@ body {
     100% {
         opacity: 0;
         visibility: hidden;
+        transform: translateY(-100%);
     }
 }
 

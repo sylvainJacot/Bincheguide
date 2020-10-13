@@ -86,7 +86,7 @@
         bottom: -15rem;
         left: -4rem;
         transform: translate(-50%, -50%);
-        animation: breathe 3s infinite ease-in-out;
+
         @include mobileL {
             width: 21rem;
             height: 21rem;
@@ -163,16 +163,3 @@
 	}
 };
 
-@keyframes breathe {
-
-	0%{
-		transform: translate(-50%, -50%) scale(1);
-    }
-    50%{
-		transform: translate(-50%, -50%) scale(1.05);
-	}
-	100% {
-		transform: translate(-50%, -50%) scale(1);
-    }
-
-};
