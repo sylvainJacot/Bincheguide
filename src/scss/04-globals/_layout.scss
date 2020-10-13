@@ -2,7 +2,7 @@ body {
     @include grid;
 }
 
-.main-header{
+.main-header {
     @include grid-column-child;
     grid-row: 1;
 }
@@ -24,10 +24,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    svg {
+        width: 10rem;
+        height: 10rem;
+        .svg-elem-1 {
+            animation: animate-svg1 0.8s ease-in-out 0s both;
+        }
+        .svg-elem-2 {
+            animation: animate-svg2 0.8s ease-in-out 0.4s both;
+        }
+    }
 }
 
 .loader.hidden {
-    animation : fadeout 1s;
+    animation: fadeout 2s;
     animation-fill-mode: forwards;
 }
 
@@ -36,11 +47,30 @@ body {
     0% {
         opacity: 1;
     }
+
     90% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
         visibility: hidden;
+    }
+}
+
+@keyframes animate-svg1{
+    0% {
+        fill: transparent;
+    }
+    100% {
+        fill: $black
+    }
+}
+@keyframes animate-svg2{
+    0% {
+        fill: transparent;
+    }
+    100% {
+        fill: $primary-color;
     }
 }
