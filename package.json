@@ -26,6 +26,6 @@
     "uglify-js": "^3.11.1"
   },
   "dependencies": {
-    "magnet-mouse": "github:fluffy-factory/magnet-mouse"
+
   }
 }
