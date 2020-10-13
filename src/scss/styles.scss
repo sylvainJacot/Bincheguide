@@ -1,12 +1,12 @@
-@import '01-config/_colors';
+//// 01 config////
 @import '01-config/mixins/mixins';
-@import '01-config/fonts';
 
 //// 02 BASE ////
 @import '02-base/resets';
+@import '02-base/fonts';
+@import '02-base/colors';
 
 //// 03 OBJECTS////
-@import '03-objects/magnet-follow';
 @import '03-objects/cursor';
 
 //// 04 GLOBALS ////

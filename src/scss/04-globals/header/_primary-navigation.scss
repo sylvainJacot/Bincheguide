@@ -5,7 +5,7 @@
 
     &::after {
         position: absolute;
-        content:"";
+        content: "";
         display: block;
         top: 0;
         right: 0;
@@ -13,19 +13,21 @@
         left: 0;
         background-color: $white;
         opacity: .3;
-        z-index: -1;    
+        z-index: -1;
+
         @include laptopS {
             display: none;
         }
-        }
+    }
 
     @include laptopS {
         flex-direction: row;
     }
 
-    .primary-navigation-item-container{
-    position: relative;
-    height: 100%;
+    .primary-navigation-item-container {
+        position: relative;
+        height: 100%;
+
         @include laptopS {
             width: unset;
         }
@@ -68,31 +70,33 @@
 
     li {
         margin-bottom: 1rem;
+
         a {
             cursor: none;
             text-decoration: none;
             color: $black;
 
             @include laptopS {
-            font-size: 1.5rem;
+                font-size: 1.5rem;
             }
         }
+
         :hover {
             color: $primary-color;
         }
     }
 }
 
-.primary-navigation-item-container:hover .primary-navigation-item{
+.primary-navigation-item-container:hover .primary-navigation-item {
     opacity: .5;
- }
+}
 
-.primary-navigation-item-container:hover  .dropdown-content{
-display: flex;
-flex-direction: column;
-transform: translateX(0);
-transform: translateY(0);
-@include basictransition($duration : .3s, $delay: 0s);
+.primary-navigation-item-container:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    transform: translateX(0);
+    transform: translateY(0);
+    @include basictransition($duration : .3s, $delay: 0s);
 
     @include laptopS {
         width: fit-content;
@@ -104,7 +108,7 @@ transform: translateY(0);
         clip-path: inset(0 0 0 0);
         border-radius: 1rem;
 
-        > li {
+        >li {
             width: max-content;
         }
     }
@@ -130,7 +134,7 @@ transform: translateY(0);
     }
 }
 
-.primary-navigation-item-container:hover  .arrow-container{
+.primary-navigation-item-container:hover .arrow-container {
     transform: rotate(180deg);
     @include basictransition($duration : .3s, $delay: 0);
 }

@@ -34,7 +34,6 @@
   animation: rotating 2s linear infinite;
 }
 
-
 .clickexpand {
   animation: expand .3s forwards;
 }
@@ -46,7 +45,7 @@
   }
 
   to {
-    transform: scale(2.2) rotate(360deg) translate(-50%, -50%);
+    transform: scale(3) rotate(360deg) translate(-50%, -50%);
     transform-origin: 0 0;
   }
 }

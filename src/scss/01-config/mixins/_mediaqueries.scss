@@ -2,7 +2,6 @@
 @mixin mobileL {
     @media (min-width: 425px) { @content; }
 }
-
 @mixin tablet {
     @media (min-width: 768px) { @content; }
 }

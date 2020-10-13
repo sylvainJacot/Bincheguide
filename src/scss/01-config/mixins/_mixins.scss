@@ -1,7 +1,6 @@
 @import './svg-icons';
 @import './mediaqueries';
 
-
 //// Main Grid ////
 
 @mixin grid {
@@ -53,17 +52,6 @@
 @mixin basictransition($duration:.3s, $delay:0s){
     transition: all $duration ease-in;
     transition-delay: $delay;
-}
-
-
-//// Absolute position ////
-
-@mixin absolutecenter($content : ""){
-    position: absolute;
-    content: $content;
-    top: 50%;  
-    left: 50%; 
-    transform: translate(-50%, -50%);
 }
 
  
