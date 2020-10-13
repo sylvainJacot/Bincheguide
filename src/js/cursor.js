@@ -2,6 +2,7 @@ let mouseCursor = document.querySelector('.cursor');
 let navLinks = document.querySelectorAll('.nav-links ul');
 let logo = document.getElementById('binchelogo');
 
+
 window.addEventListener("mousemove", cursor);
 
 function cursor(e){
