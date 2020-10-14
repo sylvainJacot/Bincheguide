@@ -30,8 +30,8 @@
 .link-grow {
   border: 1px solid $primary-color;
   border-style: dashed;
-  transition: all .1s ease infinite;
-  animation: rotating 2s linear infinite;
+  transition: all .1s ease;
+  animation: rotating 2s linear infinite alternate;
 }
 
 .clickexpand {
